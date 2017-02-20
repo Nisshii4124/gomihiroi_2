@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class gomiget : MonoBehaviour
 {
-
     public int sutetagomi;
     // Use this for initialization
     void Start()
@@ -18,13 +17,14 @@ public class gomiget : MonoBehaviour
 
     }
 
-    public void OnTriggerStay(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
        // string label = " ";
         if (TimeandScore.gomi <= TimeandScore.gomimax)
         {
             if (other.gameObject.tag == "gomi")//tag「gomi」のついたオブジェクトにふれたら
             {
+<<<<<<< HEAD
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
                     Destroy(other.gameObject);//オブジェクトを消す
@@ -32,6 +32,10 @@ public class gomiget : MonoBehaviour
                    // label = "ゴミを拾うよ～";
                 }
                 //GUI.TextField(new Rect(10, 10, 100, 100), label);
+=======
+                Destroy(other.gameObject);//オブジェクトを消す
+                TimeandScore.gomi += 1;
+>>>>>>> ae91d4101985736f5ebb4ffe2ab289ae5017d9e3
             }
         }
         if (other.gameObject.tag == "gomibako")//tag「gomibako」のついたオブジェクトにふれたら
