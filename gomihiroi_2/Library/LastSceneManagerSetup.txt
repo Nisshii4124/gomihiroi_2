@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scene/Main.unity
+=======
+- path: Assets/nakashima1.unity
+>>>>>>> 762a11c61db4c89d8ecaddcf83d15a9368122553
   isLoaded: 1
   isActive: 1
