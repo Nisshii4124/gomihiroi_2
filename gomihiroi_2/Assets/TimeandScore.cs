@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class TimeandScore : MonoBehaviour
 {
-    public static int score;
-    public static int gomi;
+    public static int score = 0;
+    public static int gomi = 0;
     public static int gomimax = 4;
 
     public Text gomiLabel;
@@ -22,8 +22,8 @@ public class TimeandScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreLabel.text = string.Format("スコア : {0:0000}", score);
+        scoreLabel.text = string.Format("スコア {0:0000}", score);
 
-        gomiLabel.text = string.Format("ゴミの数 : {0}/5", gomi);
+        gomiLabel.text = string.Format("ゴミの数 {0}/5", gomi);
     }
 }
