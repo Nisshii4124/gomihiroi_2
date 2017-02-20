@@ -18,19 +18,16 @@ public class gomiget : MonoBehaviour
 
     }
 
-    public void OnTriggerStay(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         string label = " ";
         if (TimeandScore.gomi <= TimeandScore.gomimax)
         {
             if (other.gameObject.tag == "gomi")//tag「gomi」のついたオブジェクトにふれたら
             {
-                if (Input.GetKey(KeyCode.B))
-                {
-                    Destroy(other.gameObject);//オブジェクトを消す
-                    TimeandScore.gomi += 1;
-                    label = "ゴミを拾うよ～";
-                }
+                Destroy(other.gameObject);//オブジェクトを消す
+                TimeandScore.gomi += 1;
+                label = "ゴミを拾うよ～";
                 GUI.TextField(new Rect(10, 10, 100, 100), label);
             }
         }
