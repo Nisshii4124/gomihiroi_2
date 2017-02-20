@@ -24,13 +24,23 @@ public class gomiget : MonoBehaviour
         {
             if (other.gameObject.tag == "gomi")//tag「gomi」のついたオブジェクトにふれたら
             {
+<<<<<<< HEAD
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    Destroy(other.gameObject);//オブジェクトを消す
+                    TimeandScore.gomi += 1;
+                   // label = "ゴミを拾うよ～";
+                }
+                //GUI.TextField(new Rect(10, 10, 100, 100), label);
+=======
                 Destroy(other.gameObject);//オブジェクトを消す
                 TimeandScore.gomi += 1;
+>>>>>>> ae91d4101985736f5ebb4ffe2ab289ae5017d9e3
             }
         }
         if (other.gameObject.tag == "gomibako")//tag「gomibako」のついたオブジェクトにふれたら
         {
-            if (Input.GetKeyDown(KeyCode.B))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 sutetagomi = TimeandScore.gomi;
                 TimeandScore.score += sutetagomi * 100;
