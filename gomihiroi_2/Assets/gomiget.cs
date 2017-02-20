@@ -24,7 +24,7 @@ public class gomiget : MonoBehaviour
         {
             if (other.gameObject.tag == "gomi")//tag「gomi」のついたオブジェクトにふれたら
             {
-                if (Input.GetKeyDown(KeyCode.B))
+                if (Input.GetKey(KeyCode.B))
                 {
                     Destroy(other.gameObject);//オブジェクトを消す
                     TimeandScore.gomi += 1;
