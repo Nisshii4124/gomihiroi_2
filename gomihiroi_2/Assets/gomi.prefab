@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4898730051806820}
   - component: {fileID: 33881878911195000}
-  - component: {fileID: 135921677630403320}
   - component: {fileID: 23274770213000666}
+  - component: {fileID: 135617191843785580}
   m_Layer: 0
   m_Name: gomi
   m_TagString: gomi
@@ -80,7 +80,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1192870825092278}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &135921677630403320
+--- !u!135 &135617191843785580
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
