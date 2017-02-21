@@ -96,8 +96,8 @@ public class StageSelectFadeManager : MonoBehaviour
             if (StageSelect.SelectStage == 1) { SceneManager.LoadScene(nextSceneName1); }   // 次のシーンへ
             if (StageSelect.SelectStage == 2) { SceneManager.LoadScene(nextSceneName2); }  // 次のシーンへ
             if (StageSelect.SelectStage == 3) { SceneManager.LoadScene(nextSceneName3); }  // 次のシーンへ
-            if (StageSelect.SelectStage == 4) SceneManager.LoadScene(nextSceneName4);   // 次のシーンへ
-            if (StageSelect.SelectStage == 5) SceneManager.LoadScene(nextSceneName5);   // 次のシーンへ
+            if (StageSelect.SelectStage == 4) { SceneManager.LoadScene(nextSceneName4); }   // 次のシーンへ
+            if (StageSelect.SelectStage == 5) { SceneManager.LoadScene(nextSceneName5); }  // 次のシーンへ
         }
     }
 }
