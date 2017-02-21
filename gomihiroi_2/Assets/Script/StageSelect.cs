@@ -66,7 +66,7 @@ public class StageSelect : MonoBehaviour
             isFade = false;                      // フェードスイッチOFF
             isFadeIn = false;                      // フェードインフラグOFF
         }
-}
+    }
     // フェードアウト（不透明にしていく）
     void FadeOut()
     {
@@ -83,3 +83,4 @@ public class StageSelect : MonoBehaviour
         }
     }
 }
+
