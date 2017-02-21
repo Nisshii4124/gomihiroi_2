@@ -5,6 +5,8 @@ using UnityEngine;
 public class gomiget : MonoBehaviour
 {
     public int sutetagomi;
+    int scoreUp=0;
+
     // Use this for initialization
     void Start()
     {
@@ -14,7 +16,25 @@ public class gomiget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(sutetagomi==0)
+        {
+            scoreUp = 1;
+        }
+        else if (sutetagomi <= 5)
+        {
+            scoreUp =  3;
 
+            if (sutetagomi <= 4)
+            {
+                scoreUp =  2;
+
+                if (sutetagomi <= 2)
+                {
+                    scoreUp = 1;
+                }
+            }
+        }            
+        
     }
 
     public void OnTriggerEnter(Collider other)
@@ -43,7 +63,7 @@ public class gomiget : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 sutetagomi = TimeandScore.gomi;
-                TimeandScore.score += sutetagomi * 100;
+                TimeandScore.score += sutetagomi * scoreUp * 100;
                 sutetagomi = 0;
                 TimeandScore.gomi = 0;
             }

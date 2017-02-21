@@ -81,6 +81,7 @@
     <Compile Include="Assets\Script\EnemyMove.cs" />
     <Compile Include="Assets\Script\FadeManager.cs" />
     <Compile Include="Assets\Script\StageSelect.cs" />
+    <Compile Include="Assets\Script\StageSelectFadeManager.cs" />
     <Compile Include="Assets\Script\StartBar.cs" />
     <Compile Include="Assets\Script\TimeandScore.cs" />
     <Compile Include="Assets\Script\gomiget.cs" />
@@ -113,6 +114,7 @@
     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\readme.txt" />
+    <None Include="Assets\Urban_Props\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
