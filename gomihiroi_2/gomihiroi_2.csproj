@@ -77,9 +77,6 @@
   <ItemGroup>
     <Compile Include="Assets\Script\EnemyMove.cs" />
     <Compile Include="Assets\Script\FadeManager.cs" />
-    <Compile Include="Assets\Script\ST1Lord.cs" />
-    <Compile Include="Assets\Script\ST2Lord.cs" />
-    <Compile Include="Assets\Script\ST3Lord.cs" />
     <Compile Include="Assets\Script\StageSelect.cs" />
     <Compile Include="Assets\Script\StageSelectFadeManager.cs" />
     <Compile Include="Assets\Script\StartBar.cs" />
