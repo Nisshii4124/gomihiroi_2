@@ -25,7 +25,6 @@ public class StartBar : MonoBehaviour
 
         // 画像のアルファ値をセット
         FadeImage.color = new Color(FadeImage.color.r, FadeImage.color.g, FadeImage.color.b, alpha);
-
     }
 
     // Update is called once per frame
