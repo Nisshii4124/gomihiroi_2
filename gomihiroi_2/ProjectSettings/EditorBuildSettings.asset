@@ -6,4 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scene/Title.unity
+  - enabled: 1
+    path: Assets/Scene/StageSelect.unity
+  - enabled: 1
     path: Assets/Scene/nakashima1.unity
+  - enabled: 1
+    path: Assets/Scene/nakashima2.unity
+  - enabled: 1
+    path: Assets/Scene/nakashima3.unity

@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: StageSelect
-  FadeImage: {fileID: 0}
+  FadeImage: {fileID: 337311023}
 --- !u!1 &1034239309
 GameObject:
   m_ObjectHideFlags: 0
