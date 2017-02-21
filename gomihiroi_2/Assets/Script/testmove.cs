@@ -76,7 +76,11 @@ public class testmove : MonoBehaviour
         {
             inputVertical = -1;
         }
-
+        //else
+        //{
+        //    inputHorizontal = 0;
+        //    inputVertical = 0;
+        //}
         else
         {
             inputVertical = 0;

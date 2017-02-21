@@ -7,12 +7,15 @@ public class gomiget : MonoBehaviour
     int sutetagomi;
     int scoreUp = 0;
 
+    bool gomisuteru;
+
     GameObject gomiPre;
 
     // Use this for initialization
     void Start()
     {
-        gomiPre = (GameObject)Resources.Load("");
+        gomiPre = (GameObject)Resources.Load("gomipre");
+        gomisuteru = false;
     }
 
     // Update is called once per frame
@@ -36,6 +39,17 @@ public class gomiget : MonoBehaviour
                 }
             }
         }
+        if (TimeandScore.gomi != 0)
+        {
+            if (gomisuteru == false)
+            {
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    TimeandScore.gomi -= 1;
+                    GameObject.Instantiate(gomiPre);
+                }
+            }
+        }
     }
 
     public void OnTriggerStay(Collider other)
@@ -55,6 +69,7 @@ public class gomiget : MonoBehaviour
         }
         if (other.gameObject.tag == "gomibako")//tag「gomibako」のついたオブジェクトにふれたら
         {
+            gomisuteru = true;
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 sutetagomi = TimeandScore.gomi;
@@ -65,11 +80,7 @@ public class gomiget : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                TimeandScore.gomi -= 1;
-                GameObject.Instantiate(gomiPre);
-            }
+            gomisuteru = false;
         }
     }
 }
