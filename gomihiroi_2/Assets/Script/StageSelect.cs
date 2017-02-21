@@ -193,13 +193,10 @@ public class StageSelect : MonoBehaviour
             }
         }
     }
-<<<<<<< HEAD
-=======
+ 
 
 
 
-
->>>>>>> d74349df691959d67bda188e9c2b8dd91a32180c
     // フェードアウト（不透明にしていく）
     void FadeOut()
     {
