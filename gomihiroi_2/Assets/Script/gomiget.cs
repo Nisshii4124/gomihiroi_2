@@ -7,10 +7,12 @@ public class gomiget : MonoBehaviour
     int sutetagomi;
     int scoreUp = 0;
 
+    GameObject gomiPre;
+
     // Use this for initialization
     void Start()
     {
-
+        gomiPre = (GameObject)Resources.Load("");
     }
 
     // Update is called once per frame
@@ -34,7 +36,6 @@ public class gomiget : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void OnTriggerStay(Collider other)
@@ -60,6 +61,14 @@ public class gomiget : MonoBehaviour
                 TimeandScore.score += sutetagomi * scoreUp * 100;
                 sutetagomi = 0;
                 TimeandScore.gomi = 0;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                TimeandScore.gomi -= 1;
+                GameObject.Instantiate(gomiPre);
             }
         }
     }
