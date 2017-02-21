@@ -10,7 +10,7 @@ public class testcamera : MonoBehaviour
 
     void Start()
     {
-        targetObj = GameObject.Find("SD_unitychan_humanoid");
+        targetObj = GameObject.Find("Player");
         targetPos = targetObj.transform.position;
     }
 
