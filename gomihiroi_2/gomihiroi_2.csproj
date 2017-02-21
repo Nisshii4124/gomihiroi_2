@@ -81,6 +81,7 @@
     <Compile Include="Assets\Script\ST2Lord.cs" />
     <Compile Include="Assets\Script\ST3Lord.cs" />
     <Compile Include="Assets\Script\StageSelect.cs" />
+    <Compile Include="Assets\Script\StageSelectFadeManager.cs" />
     <Compile Include="Assets\Script\StartBar.cs" />
     <Compile Include="Assets\Script\TimeandScore.cs" />
     <Compile Include="Assets\Script\gomiget.cs" />
