@@ -1,4 +1,20 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scene/pakuri.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scene/Main.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scene/nakashima1.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scene/Main.unity
+=======
+- path: Assets/Scene/nakashima2.unity
+>>>>>>> 7b06244ec1ff1221f12828f472ee0becca6a880f
+>>>>>>> e5ecc93b2e320de2968349cb73944a3fa9c915a8
+>>>>>>> 5b8488207c7971aa97875ab1ad088561a57a2e79
+>>>>>>> 8ceb19c8e7afab8906785d2f84e4988b7b37ec3a
   isLoaded: 1
   isActive: 1
