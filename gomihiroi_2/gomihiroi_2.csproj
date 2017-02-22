@@ -81,7 +81,9 @@
     <Compile Include="Assets\Script\StageSelectFadeManager.cs" />
     <Compile Include="Assets\Script\StartBar.cs" />
     <Compile Include="Assets\Script\TimeandScore.cs" />
+    <Compile Include="Assets\Script\gomibako.cs" />
     <Compile Include="Assets\Script\gomiget.cs" />
+    <Compile Include="Assets\Script\gomiget_2.cs" />
     <Compile Include="Assets\Script\gomioku.cs" />
     <Compile Include="Assets\Script\testcamera.cs" />
     <Compile Include="Assets\Script\testmove.cs" />
