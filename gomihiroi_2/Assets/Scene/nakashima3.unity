@@ -2757,6 +2757,24 @@ Transform:
   m_Father: {fileID: 1527202184}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &175166138 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1719675580318250, guid: c07ebbca550b4c1458bb983077d41fde,
+    type: 2}
+  m_PrefabInternal: {fileID: 1361849835}
+--- !u!136 &175166139
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175166138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!4 &178809101 stripped
 Transform:
   m_PrefabParentObject: {fileID: 478916, guid: 96b62898125915e4892dc72bd9f4e420, type: 2}
@@ -16810,7 +16828,7 @@ Prefab:
     - target: {fileID: 54317099419160828, guid: c07ebbca550b4c1458bb983077d41fde,
         type: 2}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114625817784202926, guid: c07ebbca550b4c1458bb983077d41fde,
         type: 2}
@@ -16821,6 +16839,11 @@ Prefab:
         type: 2}
       propertyPath: isGUI
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54317099419160828, guid: c07ebbca550b4c1458bb983077d41fde,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c07ebbca550b4c1458bb983077d41fde, type: 2}
@@ -16969,8 +16992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83, y: -30}
-  m_SizeDelta: {x: 145, y: 44}
+  m_AnchoredPosition: {x: -100.1, y: -30}
+  m_SizeDelta: {x: 170, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1366700808
 MonoBehaviour:
@@ -17004,7 +17027,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B4\u30DF\u306E\u6570 0"
+  m_Text: "\u30B4\u30DF\u306E\u6570 0/5"
 --- !u!222 &1366700809
 CanvasRenderer:
   m_ObjectHideFlags: 0
