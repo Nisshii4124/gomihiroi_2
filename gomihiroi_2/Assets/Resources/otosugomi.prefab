@@ -9,47 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1123581053987674}
+  m_RootGameObject: {fileID: 1289397337208568}
   m_IsPrefabParent: 1
---- !u!1 &1123581053987674
+--- !u!1 &1289397337208568
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4619583779692396}
-  - component: {fileID: 33307654297369244}
-  - component: {fileID: 23263364206331738}
-  - component: {fileID: 111677629454182520}
-  - component: {fileID: 64103176782222408}
-  - component: {fileID: 114439393125820024}
+  - component: {fileID: 4506997529133610}
+  - component: {fileID: 33053630614953842}
+  - component: {fileID: 23617385006306840}
+  - component: {fileID: 111563372560380640}
+  - component: {fileID: 64572961452940042}
+  - component: {fileID: 114588071421267760}
+  - component: {fileID: 114718826425451734}
   m_Layer: 0
-  m_Name: gomipre
+  m_Name: otosugomi
   m_TagString: gomi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4619583779692396
+--- !u!4 &4506997529133610
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123581053987674}
+  m_GameObject: {fileID: 1289397337208568}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.55, z: 2.005}
+  m_LocalPosition: {x: -0.6837301, y: 0.5, z: 4.0542336}
   m_LocalScale: {x: 200, y: 150, z: 200}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23263364206331738
+--- !u!23 &23617385006306840
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123581053987674}
+  m_GameObject: {fileID: 1289397337208568}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -75,19 +76,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33307654297369244
+--- !u!33 &33053630614953842
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123581053987674}
+  m_GameObject: {fileID: 1289397337208568}
   m_Mesh: {fileID: 4300000, guid: 49b028275ac99c948b5118e7a72ef078, type: 3}
---- !u!64 &64103176782222408
+--- !u!64 &64572961452940042
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123581053987674}
+  m_GameObject: {fileID: 1289397337208568}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -96,12 +97,12 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 49b028275ac99c948b5118e7a72ef078, type: 3}
---- !u!111 &111677629454182520
+--- !u!111 &111563372560380640
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123581053987674}
+  m_GameObject: {fileID: 1289397337208568}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
@@ -110,14 +111,25 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114439393125820024
+--- !u!114 &114588071421267760
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123581053987674}
+  m_GameObject: {fileID: 1289397337208568}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4976972ca835b6e4a9bdfc7d85e6d479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114718826425451734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289397337208568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc4567bf22cae541ac03e35718d4943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

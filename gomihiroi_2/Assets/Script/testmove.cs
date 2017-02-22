@@ -14,13 +14,13 @@ public class testmove : MonoBehaviour
     private float gravity = 20.0f;
 
     //移動スピード
-    private float speed = 5.0f;
+    private float speed = 1.0f;
 
     float inputHorizontal;
     float inputVertical;
     Rigidbody rb;
 
-    float moveSpeed = 4f;
+    float moveSpeed = 5f;
 
     public void Playermove()
     {
@@ -30,13 +30,13 @@ public class testmove : MonoBehaviour
             //animator.SetBool("wark", true);
             //if (Input.GetKey(KeyCode.Space))
             //{
-                //走るアニメーションを再生する
-                animator.SetBool("run", true);
-            }
-            else
-            {
-                animator.SetBool("run", false);
-            }
+            //走るアニメーションを再生する
+            animator.SetBool("run", true);
+        }
+        else
+        {
+            animator.SetBool("run", false);
+        }
             ////進行方向を向く
             //transform.LookAt(transform.position + new Vector3(inputHorizontal, 0, inputVertical));
         //}
@@ -85,6 +85,21 @@ public class testmove : MonoBehaviour
         {
             inputVertical = 0;
         }
+        if (TimeandScore.gomi >= 0)
+        {
+            moveSpeed = 5; ;
+
+            if (TimeandScore.gomi >= 4)
+            {
+                moveSpeed = 4; ;
+
+                if (TimeandScore.gomi >= 5)
+                {
+                    moveSpeed = 3;
+                }
+            }
+        }
+
         Playermove();
     }
 
