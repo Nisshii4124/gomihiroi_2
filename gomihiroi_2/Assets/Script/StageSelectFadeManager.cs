@@ -11,6 +11,7 @@ public class StageSelectFadeManager : MonoBehaviour
     public string nextSceneName3;     // 次のシーン名
     public string nextSceneName4;     // 次のシーン名
     public string nextSceneName5;     // 次のシーン名
+    public string nextSceneName6;     // 次のシーン名
 
     public Image FadeImage;          // フェードに利用する画像保存用変数
 
@@ -93,11 +94,12 @@ public class StageSelectFadeManager : MonoBehaviour
         {
             isFade = false;                        // フェードスイッチOFF
             isFadeOut = false;                        // フェードアウトフラグOFF
-            if (StageSelect.SelectStage == 1) { SceneManager.LoadScene(nextSceneName1); }   // 次のシーンへ
+            if (StageSelect.SelectStage == 1) { SceneManager.LoadScene(nextSceneName1); }  // 次のシーンへ
             if (StageSelect.SelectStage == 2) { SceneManager.LoadScene(nextSceneName2); }  // 次のシーンへ
             if (StageSelect.SelectStage == 3) { SceneManager.LoadScene(nextSceneName3); }  // 次のシーンへ
-            if (StageSelect.SelectStage == 4) { SceneManager.LoadScene(nextSceneName4); }   // 次のシーンへ
+            if (StageSelect.SelectStage == 4) { SceneManager.LoadScene(nextSceneName4); }  // 次のシーンへ
             if (StageSelect.SelectStage == 5) { SceneManager.LoadScene(nextSceneName5); }  // 次のシーンへ
+            if (StageSelect.SelectStage == 6) { SceneManager.LoadScene(nextSceneName6); }  // 次のシーンへ
         }
     }
 }
