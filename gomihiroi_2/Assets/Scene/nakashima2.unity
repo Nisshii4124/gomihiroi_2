@@ -2580,6 +2580,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1719675580318250, guid: c07ebbca550b4c1458bb983077d41fde,
     type: 2}
   m_PrefabInternal: {fileID: 1407512382}
+--- !u!136 &813491958
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 813491957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &813491968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3929,6 +3942,16 @@ Prefab:
         type: 2}
       propertyPath: isGUI
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54317099419160828, guid: c07ebbca550b4c1458bb983077d41fde,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54317099419160828, guid: c07ebbca550b4c1458bb983077d41fde,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c07ebbca550b4c1458bb983077d41fde, type: 2}
