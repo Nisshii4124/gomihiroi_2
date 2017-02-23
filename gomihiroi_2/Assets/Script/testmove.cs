@@ -20,9 +20,9 @@ public class testmove : MonoBehaviour
     float inputVertical;
     Rigidbody rb;
 
-    float moveSpeed = 5f;
+    float moveSpeed = 4.0f;
 
-    const float StunDuration = 0.5f;
+    const float StunDuration = 1.1f;
 
     float recoverTime = 0.0f;
 
@@ -55,13 +55,13 @@ public class testmove : MonoBehaviour
         if (IsStan())
         {
             //動きを止めて気絶状態からの復帰カウントを進める
+            inputHorizontal = 0.0f;
+            inputVertical = 0.0f;
 
             recoverTime -= Time.deltaTime;
         }
         else
         {
-            //inputHorizontal = Input.GetAxisRaw("Horizontal");
-            //inputVertical = Input.GetAxisRaw("Vertical");
             if (Input.GetKey(KeyCode.D))
             {
                 inputHorizontal = 1;
@@ -87,22 +87,22 @@ public class testmove : MonoBehaviour
             {
                 inputVertical = 0;
             }
+            Playermove();
         }
         if (TimeandScore.gomi >= 0)
         {
-            moveSpeed = 5; ;
+            moveSpeed = 4; ;
 
             if (TimeandScore.gomi >= 4)
             {
-                moveSpeed = 4; ;
+                moveSpeed = 3; ;
 
                 if (TimeandScore.gomi >= 5)
                 {
-                    moveSpeed = 3;
+                    moveSpeed = 2;
                 }
             }
         }
-        Playermove();
     }
 
     void FixedUpdate()
@@ -120,6 +120,19 @@ public class testmove : MonoBehaviour
         if (moveForward != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(moveForward);
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (IsStan()) return;
+
+        if(other.gameObject.tag == "crow")
+        {
+            recoverTime = StunDuration;
+
+            animator.SetTrigger("damage");
+
         }
     }
 }

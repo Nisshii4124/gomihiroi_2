@@ -88,6 +88,7 @@
     <Compile Include="Assets\Script\gomioku.cs" />
     <Compile Include="Assets\Script\testcamera.cs" />
     <Compile Include="Assets\Script\testmove.cs" />
+    <Compile Include="Assets\Script\texthyouzi.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlinkforSD.cs" />
     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
