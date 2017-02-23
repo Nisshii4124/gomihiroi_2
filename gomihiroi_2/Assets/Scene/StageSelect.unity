@@ -501,8 +501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddf080b245d51c41b763aaefb62efff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName1: nakashima1
-  nextSceneName2: nakashima2
+  nextSceneName1: nakashima2
+  nextSceneName2: nakashima1
   nextSceneName3: nakashima3
   nextSceneName4: Title
   nextSceneName5: Title
