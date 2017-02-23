@@ -51,10 +51,13 @@ public class gomibako : MonoBehaviour
                 TimeandScore.gomi = 0;
             }
         }
-        else
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
         {
             gomisuteru = false;
         }
-
     }
 }
