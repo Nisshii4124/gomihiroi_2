@@ -22,14 +22,16 @@ public class testmove : MonoBehaviour
 
     float moveSpeed = 5f;
 
+    const float StunDuration = 0.5f;
+
+    float recoverTime = 0.0f;
+
     public void Playermove()
     {
+        if (IsStan()) return;
+
         if (inputHorizontal != 0 || inputVertical != 0)
         {
-            ////歩くアニメーションを再生する
-            //animator.SetBool("wark", true);
-            //if (Input.GetKey(KeyCode.Space))
-            //{
             //走るアニメーションを再生する
             animator.SetBool("run", true);
         }
@@ -37,15 +39,12 @@ public class testmove : MonoBehaviour
         {
             animator.SetBool("run", false);
         }
-            ////進行方向を向く
-            //transform.LookAt(transform.position + new Vector3(inputHorizontal, 0, inputVertical));
-        //}
-        //else
-        //{
-        //    animator.SetBool("wark", false);
-        //}
     }
 
+    public bool IsStan()
+    {
+        return recoverTime > 0.0f;
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -53,37 +52,41 @@ public class testmove : MonoBehaviour
 
     void Update()
     {
-        //inputHorizontal = Input.GetAxisRaw("Horizontal");
-        //inputVertical = Input.GetAxisRaw("Vertical");
-        if (Input.GetKey(KeyCode.D))
+        if (IsStan())
         {
-            inputHorizontal = 1;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            inputHorizontal = -1;
-        }
-        else
-        {
-            inputHorizontal = 0;
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            inputVertical = 1;
-        }
+            //動きを止めて気絶状態からの復帰カウントを進める
 
-        else if (Input.GetKey(KeyCode.S))
-        {
-            inputVertical = -1;
+            recoverTime -= Time.deltaTime;
         }
-        //else
-        //{
-        //    inputHorizontal = 0;
-        //    inputVertical = 0;
-        //}
         else
         {
-            inputVertical = 0;
+            //inputHorizontal = Input.GetAxisRaw("Horizontal");
+            //inputVertical = Input.GetAxisRaw("Vertical");
+            if (Input.GetKey(KeyCode.D))
+            {
+                inputHorizontal = 1;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                inputHorizontal = -1;
+            }
+            else
+            {
+                inputHorizontal = 0;
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                inputVertical = 1;
+            }
+
+            else if (Input.GetKey(KeyCode.S))
+            {
+                inputVertical = -1;
+            }
+            else
+            {
+                inputVertical = 0;
+            }
         }
         if (TimeandScore.gomi >= 0)
         {
@@ -99,7 +102,6 @@ public class testmove : MonoBehaviour
                 }
             }
         }
-
         Playermove();
     }
 
