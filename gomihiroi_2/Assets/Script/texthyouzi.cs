@@ -20,6 +20,7 @@ public class texthyouzi : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             is_pressing = true;
+            gameObject.SetActive(true);
         }
     }
 
