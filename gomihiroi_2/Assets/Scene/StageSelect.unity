@@ -502,10 +502,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName1: nakashima2
-  nextSceneName2: nakashima1
-  nextSceneName3: nakashima3
-  nextSceneName4: Title
-  nextSceneName5: Title
+  nextSceneName2: nakashima5
+  nextSceneName3: nakashima4
+  nextSceneName4: nakashima3
+  nextSceneName5: nakashima6
   nextSceneName6: Title
   FadeImage: {fileID: 1057339007}
 --- !u!1 &814457255
