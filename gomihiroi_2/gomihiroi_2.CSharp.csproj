@@ -80,12 +80,14 @@
   <ItemGroup>
     <Compile Include="Assets\Script\EnemyMove\EnemyMove.cs" />
     <Compile Include="Assets\Script\EnemyMove\EnemyMovement.cs" />
+    <Compile Include="Assets\Script\EnemyMove\Enemy_Origin.cs" />
     <Compile Include="Assets\Script\EnemyMove\Enemy_haikai.cs" />
     <Compile Include="Assets\Script\EnemyMove\Enemy_tuiseki.cs" />
     <Compile Include="Assets\Script\FadeManager.cs" />
     <Compile Include="Assets\Script\StageSelect.cs" />
     <Compile Include="Assets\Script\StageSelectFadeManager.cs" />
     <Compile Include="Assets\Script\StartBar.cs" />
+    <Compile Include="Assets\Script\Sutamina.cs" />
     <Compile Include="Assets\Script\TimeandScore.cs" />
     <Compile Include="Assets\Script\gomibako.cs" />
     <Compile Include="Assets\Script\gomidrop.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Assets\Script\gomioku.cs" />
     <Compile Include="Assets\Script\testcamera.cs" />
     <Compile Include="Assets\Script\testmove.cs" />
+    <Compile Include="Assets\Script\texthyouzi.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlinkforSD.cs" />
     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
