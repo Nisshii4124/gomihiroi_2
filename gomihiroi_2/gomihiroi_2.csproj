@@ -77,6 +77,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\EnemyMove\EnemyMove.cs" />
     <Compile Include="Assets\Script\EnemyMove\EnemyMovement.cs" />
+    <Compile Include="Assets\Script\EnemyMove\Enemy_Origin.cs" />
     <Compile Include="Assets\Script\EnemyMove\Enemy_haikai.cs" />
     <Compile Include="Assets\Script\EnemyMove\Enemy_tuiseki.cs" />
     <Compile Include="Assets\Script\FadeManager.cs" />
