@@ -37,9 +37,9 @@ public class TimeandScore : MonoBehaviour
             timeUpLabel.GetComponent<CanvasRenderer>().SetAlpha(1.0f);
 
             // TimeUp の下にスコアを移動
-            Vector3 v = timeUpLabel.transform.position;
-            v.y -= 90.0f;
-            scoreLabel.rectTransform.position = v;
+            //Vector3 v = timeUpLabel.transform.position;
+            //v.y -= 90.0f;
+            //scoreLabel.rectTransform.position = v;
 
             return; // ここでUpdateメソッドが終了する
         }
