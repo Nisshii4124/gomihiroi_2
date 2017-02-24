@@ -11,14 +11,15 @@ public class Sutamina : MonoBehaviour {
     public float sutamina;//スタミナ
     Slider SUTAMINA;
 
+    public float ReCaver;
+    bool ReCaverOK;
+
     testmove player;
     Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
-        SUTAMINA = GameObject.Find("Slider").GetComponent<Slider>();
-        player = GetComponent<testmove>();
-        
+        SUTAMINA = GameObject.Find("Slider").GetComponent<Slider>();        
 
         sutamina = SUTAMINA.maxValue;
     }
@@ -28,14 +29,49 @@ public class Sutamina : MonoBehaviour {
 
         SUTAMINA.value = sutamina;
 
-        if (SUTAMINA.value != 0)
+        if (ReCaver >= 10.0f)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift)&&rb.velocity.magnitude!=0)
-            {
-                sutamina -= Time.deltaTime;
-                
-            }
+            ReCaverOK = true;
+        }
+        else
+        {
+            ReCaverOK=false;
         }
 
+        if (SUTAMINA.value != SUTAMINA.minValue && ReCaverOK == true)
+        {
+            Dash = 5 / (TimeandScore.gomi + 1) ;
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && rb.velocity.magnitude != 0)
+            {
+                DashFlag = true;
+                sutamina -= TimeandScore.gomi * Time.deltaTime;
+                
+            }
+            else
+            {
+                sutamina += Time.deltaTime;
+                DashFlag = false;
+            }
+        }
+        else//スタミナが0まで下がったら10秒間ダッシュ出来なくする
+        {
+            DashFlag = false;
+            Dash = 0.5f;
+            ReCaverOK = false;
+            ReCaver = 0;
+            sutamina += Time.deltaTime;
+        }
+        ReCaver += Time.deltaTime;
+
+        //sutaminaが上限下限を超えないように調整
+        if (sutamina <= SUTAMINA.minValue)
+        {
+            sutamina = SUTAMINA.minValue;
+        }
+        if (sutamina >= SUTAMINA.maxValue)
+        {
+            sutamina = SUTAMINA.maxValue;
+        }
 	}
 }
