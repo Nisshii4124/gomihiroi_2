@@ -89,6 +89,7 @@
     <Compile Include="Assets\Script\EnemyMove\Patrol.cs" />
     <Compile Include="Assets\Script\EnemyMove\Patrol2.cs" />
     <Compile Include="Assets\Script\FadeManager.cs" />
+    <Compile Include="Assets\Script\StageFadeManager.cs" />
     <Compile Include="Assets\Script\StageSelect.cs" />
     <Compile Include="Assets\Script\StageSelectFadeManager.cs" />
     <Compile Include="Assets\Script\StartBar.cs" />
