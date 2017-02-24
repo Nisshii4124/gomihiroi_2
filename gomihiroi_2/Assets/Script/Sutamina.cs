@@ -12,7 +12,7 @@ public class Sutamina : MonoBehaviour {
     Slider SUTAMINA;
 
     public float ReCaver;
-    bool ReCaverOK;
+    public bool ReCaverOK;
 
     testmove player;
     Rigidbody rb;
@@ -21,13 +21,18 @@ public class Sutamina : MonoBehaviour {
 	void Start () {
         SUTAMINA = GameObject.Find("Slider").GetComponent<Slider>();        
 
+
         sutamina = SUTAMINA.maxValue;
+        ReCaver = 10.0f;
+        ReCaverOK = true;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 
         SUTAMINA.value = sutamina;
+        
 
         if (ReCaver >= 10.0f)
         {
@@ -36,22 +41,39 @@ public class Sutamina : MonoBehaviour {
         else
         {
             ReCaverOK=false;
+            ReCaver += Time.deltaTime;
+        }
+        if (DashFlag == true)
+        {
+            sutamina -= (TimeandScore.gomi + 1) * 10 * Time.deltaTime;
+        }
+        else
+        {
+            sutamina += 10*Time.deltaTime;
         }
 
-        if (SUTAMINA.value != SUTAMINA.minValue && ReCaverOK == true)
+        if (SUTAMINA.value != SUTAMINA.minValue)
         {
-            Dash = 5 / (TimeandScore.gomi + 1) ;
+            Dash = 4 / (TimeandScore.gomi + 1) ;
+            if (ReCaverOK == true)
+            {
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) && rb.velocity.magnitude != 0)
-            {
-                DashFlag = true;
-                sutamina -= TimeandScore.gomi * Time.deltaTime;
-                
-            }
-            else
-            {
-                sutamina += Time.deltaTime;
-                DashFlag = false;
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+
+                    if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+                    {
+                        DashFlag = true;
+                    }
+                    else
+                    {
+                        DashFlag = false;
+                    }
+                }
+                else
+                {
+                    DashFlag = false;
+                }
             }
         }
         else//スタミナが0まで下がったら10秒間ダッシュ出来なくする
@@ -62,7 +84,7 @@ public class Sutamina : MonoBehaviour {
             ReCaver = 0;
             sutamina += Time.deltaTime;
         }
-        ReCaver += Time.deltaTime;
+        
 
         //sutaminaが上限下限を超えないように調整
         if (sutamina <= SUTAMINA.minValue)
@@ -73,5 +95,11 @@ public class Sutamina : MonoBehaviour {
         {
             sutamina = SUTAMINA.maxValue;
         }
-	}
+
+       // //青色に変更
+       //SUTAMINA.fillRect. = Color.blue;
+
+       // //変更後の色コンソールに出力
+       // Debug.Log(myCube.renderer.material.color);
+    }
 }

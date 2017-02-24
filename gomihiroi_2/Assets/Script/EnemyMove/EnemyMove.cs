@@ -53,7 +53,7 @@ public class EnemyMove : MonoBehaviour {
             enemymove = false;
         }
 
-        if (other.gameObject.tag == "Player")
+        else if (other.gameObject.tag == "Player")
         {
             enemymove = false;
             if (TimeandScore.gomi > 0)
