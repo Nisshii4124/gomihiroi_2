@@ -23,7 +23,7 @@ public class Sutamina : MonoBehaviour {
 
 
         sutamina = SUTAMINA.maxValue;
-        
+        ReCaver = 10.0f;
         ReCaverOK = true;
 
     }
@@ -54,7 +54,7 @@ public class Sutamina : MonoBehaviour {
 
         if (SUTAMINA.value != SUTAMINA.minValue)
         {
-            Dash = 8 / (TimeandScore.gomi + 1) ;
+            Dash = 4 / (TimeandScore.gomi + 1) ;
             if (ReCaverOK == true)
             {
 
