@@ -11,10 +11,13 @@ public class gomioku : MonoBehaviour {
         Transform playerTransform = GameObject.Find("Player").transform;
         // ゴミをプレーヤーの場所へ
         transform.position = playerTransform.position;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    
 }
