@@ -16,7 +16,7 @@ public class testmove : MonoBehaviour
     private float gravity = 20.0f;
 
     //移動スピード
-    private float speed = 1.0f;
+    private float dashspeed = 1.0f;
 
     float inputHorizontal;
     float inputVertical;
@@ -93,15 +93,15 @@ public class testmove : MonoBehaviour
         }
         if (TimeandScore.gomi >= 0)
         {
-            moveSpeed = 4; ;
+            moveSpeed = 4 * dashspeed; 
 
             if (TimeandScore.gomi >= 4)
             {
-                moveSpeed = 3; ;
+                moveSpeed = 3 + dashspeed; 
 
                 if (TimeandScore.gomi >= 5)
                 {
-                    moveSpeed = 2;
+                    moveSpeed = 2 + dashspeed;
                 }
             }
         }
@@ -122,7 +122,11 @@ public class testmove : MonoBehaviour
         //    Debug.Log("ねーよ");
         if (DASH.DashFlag==true)
         {
-             moveSpeed+= DASH.Dash;
+             dashspeed *= DASH.Dash;
+        }
+        else
+        {
+            dashspeed = 1;
         }
 
         // キャラクターの向きを進行方向に
