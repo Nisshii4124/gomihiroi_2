@@ -6,6 +6,8 @@ public class testmove : MonoBehaviour
 {
     //キャラクターコントローラーへの参照
     CharacterController characterController;
+    [SerializeField]
+    Sutamina DASH;
 
     //アニメーターへの参照
     public Animator animator;
@@ -121,11 +123,25 @@ public class testmove : MonoBehaviour
             // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
             rb.velocity = moveForward * moveSpeed + new Vector3(0, rb.velocity.y, 0);
 
+<<<<<<< HEAD
             // キャラクターの向きを進行方向に
             if (moveForward != Vector3.zero)
             {
                 transform.rotation = Quaternion.LookRotation(moveForward);
             }
+=======
+        //if (!DASH)
+        //    Debug.Log("ねーよ");
+        if (DASH.DashFlag==true)
+        {
+             moveSpeed+= DASH.Dash;
+        }
+
+        // キャラクターの向きを進行方向に
+        if (moveForward != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(moveForward);
+>>>>>>> f98a2033f35533c810af4be0381b1284c9106819
         }
     }
 
