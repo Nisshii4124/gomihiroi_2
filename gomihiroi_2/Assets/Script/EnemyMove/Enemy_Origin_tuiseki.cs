@@ -17,11 +17,11 @@ public class Enemy_Origin_tuiseki : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Enemy_Origin.tuibi = true;
+            EnemyMove.suitchi = true;
         }
     }
 
@@ -29,7 +29,7 @@ public class Enemy_Origin_tuiseki : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Enemy_Origin.tuibi = false;
+            EnemyMove.suitchi = false;
         }
     }
 }

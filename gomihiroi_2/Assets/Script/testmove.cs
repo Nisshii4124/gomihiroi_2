@@ -52,54 +52,57 @@ public class testmove : MonoBehaviour
 
     void Update()
     {
-        if (IsStan())
+        if (TimeandScore.gameFlg == true)
         {
-            //動きを止めて気絶状態からの復帰カウントを進める
-            inputHorizontal = 0.0f;
-            inputVertical = 0.0f;
+            if (IsStan())
+            {
+                //動きを止めて気絶状態からの復帰カウントを進める
+                inputHorizontal = 0.0f;
+                inputVertical = 0.0f;
 
-            recoverTime -= Time.deltaTime;
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.D))
-            {
-                inputHorizontal = 1;
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                inputHorizontal = -1;
+                recoverTime -= Time.deltaTime;
             }
             else
             {
-                inputHorizontal = 0;
-            }
-            if (Input.GetKey(KeyCode.W))
-            {
-                inputVertical = 1;
-            }
-
-            else if (Input.GetKey(KeyCode.S))
-            {
-                inputVertical = -1;
-            }
-            else
-            {
-                inputVertical = 0;
-            }
-            Playermove();
-        }
-        if (TimeandScore.gomi >= 0)
-        {
-            moveSpeed = 4; ;
-
-            if (TimeandScore.gomi >= 4)
-            {
-                moveSpeed = 3; ;
-
-                if (TimeandScore.gomi >= 5)
+                if (Input.GetKey(KeyCode.D))
                 {
-                    moveSpeed = 2;
+                    inputHorizontal = 1;
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    inputHorizontal = -1;
+                }
+                else
+                {
+                    inputHorizontal = 0;
+                }
+                if (Input.GetKey(KeyCode.W))
+                {
+                    inputVertical = 1;
+                }
+
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    inputVertical = -1;
+                }
+                else
+                {
+                    inputVertical = 0;
+                }
+                Playermove();
+            }
+            if (TimeandScore.gomi >= 0)
+            {
+                moveSpeed = 4; ;
+
+                if (TimeandScore.gomi >= 4)
+                {
+                    moveSpeed = 3; ;
+
+                    if (TimeandScore.gomi >= 5)
+                    {
+                        moveSpeed = 2;
+                    }
                 }
             }
         }
@@ -107,19 +110,22 @@ public class testmove : MonoBehaviour
 
     void FixedUpdate()
     {
-        // カメラの方向から、X-Z平面の単位ベクトルを取得
-        Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
-
-        // 方向キーの入力値とカメラの向きから、移動方向を決定
-        Vector3 moveForward = cameraForward * inputVertical + Camera.main.transform.right * inputHorizontal;
-
-        // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
-        rb.velocity = moveForward * moveSpeed + new Vector3(0, rb.velocity.y, 0);
-
-        // キャラクターの向きを進行方向に
-        if (moveForward != Vector3.zero)
+        if (TimeandScore.gameFlg == true)
         {
-            transform.rotation = Quaternion.LookRotation(moveForward);
+            // カメラの方向から、X-Z平面の単位ベクトルを取得
+            Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+
+            // 方向キーの入力値とカメラの向きから、移動方向を決定
+            Vector3 moveForward = cameraForward * inputVertical + Camera.main.transform.right * inputHorizontal;
+
+            // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
+            rb.velocity = moveForward * moveSpeed + new Vector3(0, rb.velocity.y, 0);
+
+            // キャラクターの向きを進行方向に
+            if (moveForward != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(moveForward);
+            }
         }
     }
 
