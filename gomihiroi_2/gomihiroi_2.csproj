@@ -78,9 +78,15 @@
     <Compile Include="Assets\Script\EnemyMove\EnemyMove.cs" />
     <Compile Include="Assets\Script\EnemyMove\EnemyMovement.cs" />
     <Compile Include="Assets\Script\EnemyMove\Enemy_Origin.cs" />
+    <Compile Include="Assets\Script\EnemyMove\Enemy_Origin_tuiseki.cs" />
     <Compile Include="Assets\Script\EnemyMove\Enemy_haikai.cs" />
     <Compile Include="Assets\Script\EnemyMove\Enemy_tuiseki.cs" />
+    <Compile Include="Assets\Script\EnemyMove\FindPath.cs" />
+    <Compile Include="Assets\Script\EnemyMove\MoveTo.cs" />
+    <Compile Include="Assets\Script\EnemyMove\Patrol.cs" />
+    <Compile Include="Assets\Script\EnemyMove\Patrol2.cs" />
     <Compile Include="Assets\Script\FadeManager.cs" />
+    <Compile Include="Assets\Script\StageFadeManager.cs" />
     <Compile Include="Assets\Script\StageSelect.cs" />
     <Compile Include="Assets\Script\StageSelectFadeManager.cs" />
     <Compile Include="Assets\Script\StartBar.cs" />
