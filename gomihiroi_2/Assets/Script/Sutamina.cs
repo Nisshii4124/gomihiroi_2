@@ -54,7 +54,7 @@ public class Sutamina : MonoBehaviour {
 
         if (SUTAMINA.value != SUTAMINA.minValue)
         {
-            Dash = 4 / (TimeandScore.gomi + 1) ;
+            Dash = (TimeandScore.gomimax-TimeandScore.gomi)/3 ;
             if (ReCaverOK == true)
             {
 
@@ -83,6 +83,7 @@ public class Sutamina : MonoBehaviour {
             ReCaverOK = false;
             ReCaver = 0;
             sutamina += Time.deltaTime;
+
         }
         
 
