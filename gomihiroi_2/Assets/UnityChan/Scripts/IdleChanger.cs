@@ -54,25 +54,25 @@ namespace UnityChan
 				anim.SetBool ("Back", true);
 			}
 		
-			//// "Next"フラグがtrueの時の処理
-			//if (anim.GetBool ("Next")) {
-			//	// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
-			//	currentState = anim.GetCurrentAnimatorStateInfo (0);
-			//	if (previousState.fullPathHash != currentState.fullPathHash) {
-			//		anim.SetBool ("Next", false);
-			//		previousState = currentState;				
-			//	}
-			//}
+			// "Next"フラグがtrueの時の処理
+			if (anim.GetBool ("Next")) {
+				// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
+				currentState = anim.GetCurrentAnimatorStateInfo (0);
+				if (previousState.fullPathHash != currentState.fullPathHash) {
+					anim.SetBool ("Next", false);
+					previousState = currentState;				
+				}
+			}
 		
-			//// "Back"フラグがtrueの時の処理
-			//if (anim.GetBool ("Back")) {
-			//	// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
-			//	currentState = anim.GetCurrentAnimatorStateInfo (0);
-			//	if (previousState.fullPathHash != currentState.fullPathHash) {
-			//		anim.SetBool ("Back", false);
-			//		previousState = currentState;
-			//	}
-			//}
+			// "Back"フラグがtrueの時の処理
+			if (anim.GetBool ("Back")) {
+				// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
+				currentState = anim.GetCurrentAnimatorStateInfo (0);
+				if (previousState.fullPathHash != currentState.fullPathHash) {
+					anim.SetBool ("Back", false);
+					previousState = currentState;
+				}
+			}
 		}
 
 		void OnGUI ()
